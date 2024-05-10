@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("./header.css");
+@import url("./search.css");
+@import url("./results.css");
+@import url("./footer.css");
+:root {
+  --neutral-950: #0a0a0a;
+  --neutral-900: #171717;
+  --neutral-500: #737373;
+  --neutral-50: #fafafa;
+  --violet-300: #c4b5fd;
+}
+
+body {
+  background-color: var(--neutral-950);
+  color: var(--neutral-50);
+  width: 25rem;
+  margin: 0 auto;
+  font-family: "Archivo", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--neutral-50);
+}

@@ -1,0 +1,9 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 2px solid var(--violet-300);
+  margin-top: 20vh;
+  padding-top: 1em;
+  font-size: 1.25em;
+}

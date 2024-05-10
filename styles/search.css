@@ -1,0 +1,20 @@
+.searchContainer {
+  display: flex;
+  justify-content: center;
+}
+
+#search {
+  box-sizing: content-box;
+  height: 35px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid var(--violet-300);
+  background-color: var(--neutral-900);
+  color: var(--text);
+  font-size: 1.25rem;
+}
+
+#search:focus {
+  border: 2px solid var(--violet-300);
+}
