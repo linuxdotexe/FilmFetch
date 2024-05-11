@@ -4,17 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/global.css" />
+    <script src="script.js" defer></script>
     <title>FilmFetch</title>
   </head>
   <body>
     <header>
       <a href="/"><span>F</span>ilm<span>F</span>etch</a>
     </header>
-    <form class="searchContainer">
-      <input type="text" id="search" placeholder="Enter the film name here." />
+    <form class="searchContainer" id="submittor">
+      <input
+        type="text"
+        id="search"
+        required
+        placeholder="Enter the film name here." />
     </form>
     <h3>Results</h3>
-    <div class="resultsContainer">
+    <div id="resultsContainer">
       <p class="result" id="placeholder">Lorem (2020), dir. Ipsum.</p>
     </div>
     <p>

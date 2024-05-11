@@ -1,4 +1,4 @@
-.resultsContainer {
+#resultsContainer {
   border: 2px solid var(--violet-300);
   border-radius: 10px;
 }
