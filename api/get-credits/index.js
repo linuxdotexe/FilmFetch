@@ -1,0 +1,21 @@
+const options = {
+  method: "GET",
+  headers: {
+    accept: "application/json",
+    Authorization: `Bearer ${process.env.auth_token}`,
+  },
+};
+export default function GET(request, response) {
+  const baseURL = "https://api.themoviedb.org/3/";
+  const movieId = request.query.movieId;
+  const movieSearch = `movie/${movieId}/credits`;
+  const url = baseURL + movieSearch;
+  // TODO: error handling
+  fetch(url, options)
+    .then((res) => res.json())
+    .then((res) => response.json(res))
+    .catch((e) => {
+      console.log(e);
+      return response.json({ error: true });
+    });
+}
