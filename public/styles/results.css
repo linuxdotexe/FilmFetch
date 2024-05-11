@@ -15,3 +15,7 @@ p {
   border-radius: 15px;
   color: var(--neutral-500);
 }
+
+.result:hover {
+  cursor: pointer;
+}

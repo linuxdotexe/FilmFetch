@@ -8,6 +8,9 @@ function createResultElement(content) {
   const elementName = document.createElement("p");
   elementName.textContent = content;
   elementName.classList.add("result");
+  elementName.addEventListener("click", () => {
+    navigator.clipboard.writeText(content);
+  });
   resultsContainer.appendChild(elementName);
 }
 
