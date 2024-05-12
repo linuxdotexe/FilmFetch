@@ -8,6 +8,7 @@ function createResultElement(content) {
   const elementName = document.createElement("p");
   elementName.textContent = content;
   elementName.classList.add("result");
+  elementName.setAttribute("title", "Click to copy text to clipboard.");
   elementName.addEventListener("click", () => {
     navigator.clipboard.writeText(content);
   });

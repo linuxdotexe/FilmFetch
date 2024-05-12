@@ -11,8 +11,16 @@
     <header>
       <a href="/"><span>F</span>ilm<span>F</span>etch</a>
     </header>
-    <p>Works for movies only. For now.</p>
+    <p>Enter a movie name and click <span class="pre">Enter</span>.</p>
     <form class="searchContainer" id="submittor">
+      <!-- <label
+        >Movie
+        <input type="radio" name="choice" checked="checked" />
+      </label>
+      <label
+        >TV
+        <input type="radio" name="choice" />
+      </label> -->
       <input
         type="text"
         id="search"
@@ -20,8 +28,18 @@
         placeholder="Enter the film name here." />
     </form>
     <h3>Results</h3>
+    <p>Click on an entry to copy the text in it.</p>
+    <p>
+      The first entry you see by default is the last film I saw in a cinema. It
+      will go away after you make your search.
+    </p>
     <div id="resultsContainer">
-      <p class="result" id="placeholder">Lorem (2020), dir. Ipsum.</p>
+      <p
+        class="result"
+        id="placeholder"
+        title="Click to copy text to clipboard">
+        The Fall Guy (2024), dir. David Leitch
+      </p>
     </div>
     <p>
       I made this for myself. As they say, if you find yourself spending 1
