@@ -1,8 +1,11 @@
 footer {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 18rem;
   border-top: 2px solid var(--accent);
-  margin-top: 10vh;
-  padding-top: 1em;
+  position: absolute;
+  bottom: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: inherit;
 }

@@ -44,6 +44,9 @@ a {
     font-size: 1.15rem;
     width: 25rem;
   }
+  footer {
+    width: 25rem;
+  }
   header {
     font-size: 2rem;
   }
