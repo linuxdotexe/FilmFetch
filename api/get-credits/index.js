@@ -7,9 +7,15 @@ const options = {
 };
 export default function GET(request, response) {
   const baseURL = "https://api.themoviedb.org/3/";
-  const movieId = request.query.movieId;
-  const movieSearch = `movie/${movieId}/credits`;
-  const url = baseURL + movieSearch;
+  const id = request.query.id;
+  const choice = request.query.choice;
+  let search = ``;
+  if (choice === "movie") {
+    search = `movie/${id}/credits`;
+  } else {
+    search = `tv/${id}`;
+  }
+  const url = baseURL + search;
   // TODO: error handling
   fetch(url, options)
     .then((res) => res.json())

@@ -6,13 +6,18 @@ const options = {
   },
 };
 export default function GET(request, response) {
-  const baseURL = "https://api.themoviedb.org/3/";
-  const movieName = request.query.movieName;
+  const baseURL = "https://api.themoviedb.org/3/search/";
+  const name = request.query.name;
+  const choice = request.query.choice;
+  let search = ``;
   // TODO: look into this later
   // NOTE: fetch causing trouble at will.
-  // const movieSearch = `search/multi?query=${movieName}`;
-  const movieSearch = `search/movie?query=${movieName}`;
-  const url = baseURL + movieSearch;
+  if (choice === "movie") {
+    search += `movie?query=${name}`;
+  } else {
+    search += `tv?query=${name}`;
+  }
+  const url = baseURL + search;
   // TODO: error handling
   fetch(url, options)
     .then((res) => res.json())

@@ -5,27 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/global.css" />
     <script src="script.js" defer></script>
-    <title>FilmFetch</title>
+    <title>MultiFetcher</title>
   </head>
   <body>
     <header>
-      <a href="/"><span>F</span>ilm<span>F</span>etch</a>
+      <a href="/"><span>M</span>ulti<span>F</span>etcher</a>
     </header>
-    <p>Enter a movie name and click <span class="pre">Enter</span>.</p>
+    <p>
+      Enter a <span id="instructions">film</span> name and click
+      <span class="pre">Enter</span>.
+    </p>
     <form class="searchContainer" id="submittor">
-      <!-- <label
-        >Movie
-        <input type="radio" name="choice" checked="checked" />
-      </label>
-      <label
-        >TV
-        <input type="radio" name="choice" />
-      </label> -->
+      <div class="tabs">
+        <input type="radio" id="choiceMovie" name="tabs" checked="" />
+        <label class="tab" for="choiceMovie">Movie</label>
+        <input type="radio" id="choiceTv" name="tabs" />
+        <label class="tab" for="choiceTv">TV Series</label>
+      </div>
       <input
         type="text"
         id="search"
         required
-        placeholder="Enter the film name here." />
+        placeholder="Enter the search query here." />
     </form>
     <h3>Results</h3>
     <p>Click on an entry to copy the text in it.</p>
