@@ -19,7 +19,8 @@
 body {
   background-color: var(--neutral-950);
   color: var(--neutral-50);
-  width: 25rem;
+  width: 18rem;
+  font-size: 1rem;
   margin: 0 auto;
   font-family: "Archivo", sans-serif;
 }
@@ -31,10 +32,32 @@ a {
 
 .pre {
   font-family: "IBM Plex Mono", monospace;
-  font-size: 20px;
   font-weight: 500;
 }
 
 * {
   transition: color 0.4s ease-in;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 1.15rem;
+    width: 25rem;
+  }
+  header {
+    font-size: 2rem;
+  }
+  #search {
+    font-size: 1.15rem;
+    padding: 20px;
+  }
+  .result {
+    padding: 15px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #searchBtn {
+    display: none;
+  }
 }

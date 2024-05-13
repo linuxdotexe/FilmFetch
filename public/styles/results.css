@@ -4,12 +4,11 @@
 }
 
 p {
-  font-size: 1.25em;
   color: var(--neutral-50);
 }
 
 .result {
-  padding: 15px;
+  padding: 5px 10px;
   margin: 20px;
   background-color: var(--neutral-900);
   border-radius: 15px;

@@ -12,7 +12,6 @@ const choiceTv = document.getElementById("choiceTv");
 choiceTv.addEventListener("click", () => {
   if (choiceTv.checked) {
     root.style.setProperty("--accent", "var(--pink-300)");
-    instructions.textContent = "TV series";
   }
 });
 
@@ -20,7 +19,6 @@ const choiceMovie = document.getElementById("choiceMovie");
 choiceMovie.addEventListener("click", () => {
   if (choiceMovie.checked) {
     root.style.setProperty("--accent", "var(--violet-300)");
-    instructions.textContent = "film";
   }
 });
 

@@ -5,24 +5,35 @@
   flex-wrap: wrap;
 }
 
+#inputHolder {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+#searchBtn {
+  background-color: var(--neutral-900);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  border-radius: 10px;
+  font-size: inherit;
+  padding: 0 1rem;
+}
+
 #search {
   box-sizing: content-box;
   height: 35px;
   width: 100%;
-  padding: 20px;
+  padding: 5px 10px;
   border-radius: 10px;
   border: 2px solid var(--accent);
   background-color: var(--neutral-900);
   color: var(--text);
-  font-size: 1.25rem;
 }
 
 #search:focus {
   border: 2px solid var(--accent);
-}
-
-label {
-  font-size: 1.25rem;
 }
 
 .tabs {
