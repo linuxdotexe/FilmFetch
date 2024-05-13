@@ -62,3 +62,13 @@
 .searchContainer input[type="radio"]:checked + label {
   color: var(--accent);
 }
+
+::placeholder {
+  color: var(--neutral-500);
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: red;
+}
