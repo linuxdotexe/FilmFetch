@@ -33,6 +33,12 @@ function createResultElement(content) {
   resultsContainer.appendChild(elementName);
 }
 
+function removeKids() {
+  while (resultsContainer.firstChild) {
+    resultsContainer.removeChild(resultsContainer.lastChild);
+  }
+}
+
 submitButton.addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -45,9 +51,7 @@ submitButton.addEventListener("submit", async (e) => {
     `/api/get-input/?choice=${choice}&name=${search.value}`
   );
   const data = await response.json();
-  while (resultsContainer.firstChild) {
-    resultsContainer.removeChild(resultsContainer.lastChild);
-  }
+  removeKids();
   if (data.results.length === 0 || !data.results.hasOwnProperty(length)) {
     createResultElement("What you are looking for might not be available.");
     return;
@@ -71,15 +75,34 @@ submitButton.addEventListener("submit", async (e) => {
         : "";
       createResultElement(`${data.results[i].title}${date}, dir. ${dirName}.`);
     } else {
-      dirName = creditsData?.created_by[0].name;
+      try {
+        dirName = creditsData?.created_by[0].name;
 
-      const first_air_date = creditsData.first_air_date;
-      const last_air_date = creditsData.last_air_date;
+        const first_air_date = creditsData.first_air_date;
+        const last_air_date = creditsData.last_air_date;
 
-      const date = `${first_air_date.slice(0, 4)}-${last_air_date.slice(0, 4)}`;
-      createResultElement(
-        `${data.results[i].name} (${date}), created by ${dirName}.`
-      );
+        const date = `${first_air_date.slice(0, 4)}-${last_air_date.slice(
+          0,
+          4
+        )}`;
+        createResultElement(
+          `${data.results[i].name} (${date}), created by ${dirName}.`
+        );
+      } catch (err) {
+        if (resultsContainer.childElementCount > 0) {
+          if (
+            resultsContainer.firstElementChild.textContent ===
+            "What you are looking for might not be available."
+          ) {
+            removeKids();
+          }
+          continue;
+        } else {
+          createResultElement(
+            "What you are looking for might not be available."
+          );
+        }
+      }
     }
   }
 });
