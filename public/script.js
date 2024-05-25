@@ -48,7 +48,7 @@ submitButton.addEventListener("submit", async (e) => {
   while (resultsContainer.firstChild) {
     resultsContainer.removeChild(resultsContainer.lastChild);
   }
-  if (data.results.length === 0 || data.results.hasOwnProperty(length)) {
+  if (data.results.length === 0 || !data.results.hasOwnProperty(length)) {
     createResultElement("What you are looking for might not be available.");
     return;
   }
